@@ -36,5 +36,3 @@ CREATE TABLE tb_tipo_documento(
 );
 
 CREATE TABLE tb_agenda()
-
-CREATE TABLE tb_efeito()
