@@ -9,6 +9,13 @@
     />
     <title>Sistema PAP</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="../assets/fonts/font-awesome-4.7/css/font-awesome.min.css"
@@ -35,52 +42,7 @@
     <link rel="stylesheet" href="../assets/styles/theme/aos.css" />
 
     <link rel="stylesheet" href="../assets/styles/dashboard.css" />
-    <style>
-      .navbar-sidebar li.active,
-      .navbar-sidebar li.active a {
-        background-color: #fff !important;
-        border-radius: 0.5rem;
-        color: #000 !important;
-      }
-
-      .navbar-sidebar li a {
-        padding-left: 1rem !important;
-      }
-
-      .bg-user-estacionamento {
-        display: flex !important;
-        flex-wrap: wrap;
-      }
-
-      .bg-user-estacionamento .navbar-sidebar {
-        width: 100%;
-        height: 80%;
-      }
-      .stans-office {
-        width: 100%;
-        height: 10%;
-        background-color: #e5e5e5 !important;
-
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .stans-office h2 {
-        font-weight: normal;
-        font-size: 20px !important;
-        color: #e3a667;
-      }
-
-      .banner-dashboard {
-        margin-top: -120px;
-      }
-
-      .btn-primary {
-        background: #a13529;
-        border: 0;
-      }
-    </style>
+    <style></style>
   </head>
   <body class="animsition">
     <div class="page-wrapper">
@@ -134,18 +96,18 @@
 
       <!-- MENU SIDEBAR-->
       <aside class="menu-sidebar d-none d-lg-block">
-        <div class="logo dash-aside-bg">
+        <div class="dash-aside-bg">
           <a href="#" class="text-white">PAINEL DE CONTROLO</a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1 bg-user-estacionamento">
           <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-              <li>
+              <li class="active">
                 <a href="index.php?id=home"> <i class="fas fa-home"></i>Home</a>
               </li>
               <li>
                 <a href="registro.php?id=registro">
-                  <i class="fas fa-car"></i>Postos de Identificação</a
+                  <i class="fas fa-car"></i>Posto Identificação</a
                 >
               </li>
               <li>
@@ -159,33 +121,46 @@
                 >
               </li>
               <li>
-                <a href="?logout=true"> <i class="fas fa-power-off"></i>Sair</a>
+                <a href="?logout=true">
+                  <i class="fas fa-power-off"></i>Terminar Sessão</a
+                >
               </li>
             </ul>
           </nav>
-          <div class="stans-office">
-            <h2>Sistema de Gestão de Agenda</h2>
-          </div>
         </div>
       </aside>
       <!-- Header -->
 
       <!-- PAGE CONTAINER-->
       <div class="page-container">
+        <!-- Header -->
+        <div class="header-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-right">
+                <div class="display-avatar">
+                  <a href="#" class="perfil-avatar">
+                    <img src="../assets/images/avatar.jpg" alt="" />
+                    <p>Vuvu Pereira</p>
+                  </a>
+                  <div class="info-logout">
+                    <a href="#"> <i class="fas fa-power-off"></i> Sair</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header -->
         <!-- MAIN CONTENT-->
         <div class="main-content">
-          <div class="banner-dashboard"></div>
           <div
             class="section__content section__content--p30"
-            style="margin-top: -100px"
+            style="margin-top: -200px"
           >
             <div class="container-fluid">
               <div class="row mt-4">
-                <!-- <div
-                  class="col-md-4 col-lg-4"
-                  data-aos="fade-down"
-                  data-aos-duration="500"
-                >
+                <div class="col-md-4 col-lg-4">
                   <div class="rounded p-4 borda-top">
                     <div class="row">
                       <div class="col-lg-4">
@@ -194,24 +169,14 @@
                         </div>
                       </div>
                       <div class="col-lg-8">
-                        <h3>
-                          <?php 
-                            $contabilizandoClientes = new Model();
-                            $contar = $contabilizandoClientes->EXE_QUERY("SELECT * FROM tb_cliente"); 
-                            echo count($contar);
-                          ?>
-                        </h3>
-                        <span>Total de Clientes</span>
+                        <h3>2</h3>
+                        <span>Postos</span>
                       </div>
                     </div>
                   </div>
-                </div> -->
+                </div>
 
-                <div
-                  class="col-md-4 col-lg-4"
-                  data-aos="fade-down"
-                  data-aos-duration="800"
-                >
+                <div class="col-md-4 col-lg-4">
                   <div class="rounded p-4 borda-top">
                     <div class="row">
                       <div class="col-lg-4">
@@ -221,18 +186,14 @@
                       </div>
                       <div class="col-lg-8">
                         <h3>3</h3>
-                        <span>Vagas Solicitadas</span>
+                        <span>Agendamento</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div
-                  class="col-md-4 col-lg-4"
-                  data-aos="fade-down"
-                  data-aos-duration="1200"
-                >
-                  <!-- <div class="rounded p-4 borda-top">
+                <div class="col-md-4 col-lg-4">
+                  <div class="rounded p-4 borda-top">
                     <div class="row">
                       <div class="col-lg-4">
                         <div class="borda-icons shadow">
@@ -240,26 +201,16 @@
                         </div>
                       </div>
                       <div class="col-lg-8">
-                        <h3>
-                          <?php 
-                            $contabilizandoCarros = new Model();
-                            $contar = $contabilizandoCarros->EXE_QUERY("SELECT * FROM tb_carro_cliente"); 
-                            echo count($contar);
-                          ?>
-                        </h3>
-                        <span>Total de Carros</span>
+                        <h3>5</h3>
+                        <span>Usuários</span>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
 
               <div class="row mt-4">
-                <div
-                  class="col-lg-12 col-xl-12 col-sm-12"
-                  data-aos="fade-left"
-                  data-aos-duration="2300"
-                >
+                <div class="col-lg-12 col-xl-12 col-sm-12">
                   <div class="rounded p-4 borda-top">
                     <h1 class="title">Gráfico Mensal de Solicitações</h1>
                     <hr />
@@ -286,79 +237,74 @@
   <!-- Vendor JS       -->
   <script src="../assets/vendor/animsition/animsition.min.js"></script>
   <!-- Main JS-->
-  <script src="../assets/scripts/theme/main.js"></script>
 
   <script src="../assets/scripts/Chart.min.js"></script>
 
+  <script src="../assets/scripts/theme/main.js"></script>
+
   <script>
     $(function () {
-      $('#dataGeral').dataTable();
-      $('#perfilUsuarioTable').dataTable();
-      $('#vagaTable').dataTable();
-      $('#entradaCarro').dataTable();
-      $('#saidaCarro').dataTable();
-      $('#solicitacaoTable').dataTable();
-      $('#carroRegistrado').dataTable();
-
       // Trabalhar nos gráficos
-      var lineChart = document.getElementById("mycompra-chart").getContext("2d");
+      var lineChart = document
+        .getElementById("mycompra-chart")
+        .getContext("2d");
       var myLineChart = new Chart(lineChart, {
-      type: "bar",
-      data: {
+        type: "line",
+        data: {
           labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
           ],
           datasets: [
-          {
-              label: "Clientes registadas",
-              borderColor: "#212121",
-              pointBorderColor: "#212121",
-              pointBackgroundColor: "#212121",
+            {
+              label: "Solicitação de agendamento",
+              borderColor: "#a13529",
+              pointBorderColor: "#a13529",
+              pointBackgroundColor: "#a13529",
               pointBorderWidth: 2,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 1,
               pointRadius: 4,
-              backgroundColor: "#212121",
+              backgroundColor: "transparent",
               fill: true,
               borderWidth: 2,
-              data: <?= json_encode($clientesMensal) ?>,
-          },
+              data: [10, 20, 10],
+            },
           ],
-      },
-      options: {
+        },
+        options: {
           responsive: true,
           maintainAspectRatio: false,
           legend: {
-          position: "bottom",
-          labels: {
+            position: "bottom",
+            labels: {
               padding: 10,
               fontColor: "#1f6feb",
-          },
+            },
           },
           tooltips: {
-          bodySpacing: 4,
-          mode: "nearest",
-          intersect: 0,
-          position: "nearest",
-          xPadding: 10,
-          yPadding: 10,
-          caretPadding: 10,
+            bodySpacing: 4,
+            mode: "nearest",
+            intersect: 0,
+            position: "nearest",
+            xPadding: 10,
+            yPadding: 10,
+            caretPadding: 10,
           },
           layout: {
-          padding: { left: 15, right: 15, top: 15, bottom: 15 },
+            padding: { left: 15, right: 15, top: 15, bottom: 15 },
           },
-      },
+        },
       });
     });
   </script>

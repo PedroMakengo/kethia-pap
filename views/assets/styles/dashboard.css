@@ -1,33 +1,18 @@
-.banner-dashboard {
-  background: linear-gradient(#212121b6, #212121b6), url(../images/bg-3.webp);
-  height: 250px;
-  margin-top: -55px;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.dash-aside-bg,
-.menu-sidebar__content {
+.menu-sidebar {
   box-shadow: none !important;
-  background: #212121 !important;
+  background: linear-gradient(#e3a567c2, #a13529), url(../images/photo1.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
   border: none !important;
-}
-
-.bg-search,
-.bg-admin {
-  background: #fff;
-}
-
-/* Barra-menu */
-.barra-menu {
-  height: 60px;
 }
 
 .borda-top {
   background-color: #fff;
   border-top: 4px solid #fff;
-}
-
-.menu-sidebar__content li.active {
-  border-right: 2px solid #fff !important;
 }
 
 .menu-sidebar__content li.active a,
@@ -45,7 +30,7 @@
   width: 60px;
   height: 60px;
   text-align: center;
-  background: #212121;
+  background: linear-gradient(#e3a567c2, #a13529);
 }
 
 .borda-icons i {
@@ -59,31 +44,63 @@
   font-weight: 300;
 }
 
-.borda-img {
-  width: 90px;
-  height: 90px;
-  background: #212121;
+.navbar-sidebar li.active,
+.navbar-sidebar li.active a {
+  background-color: #fff !important;
+  border-radius: 0.5rem;
+  color: #e3a567 !important;
+}
 
+.navbar-sidebar li a {
+  padding-left: 1rem !important;
+  color: #fff !important;
+}
+
+/* HEADER TOP */
+.header-top {
+  background: #e3a567;
+  height: 10vh;
+  height: 250px;
+}
+
+.header-top .container {
+  width: 94%;
+}
+
+.header-top .container .perfil-avatar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-top .container .perfil-avatar img {
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
+}
+
+.header-top .container .display-avatar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.header-top .container .display-avatar a {
+  color: #fff;
+}
+
+.dash-aside-bg {
+  height: 8vh;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-inline: 2.2rem;
 
-  margin: 0 auto;
+  border-bottom: 1px solid #fff;
 }
 
-.borda-img img {
-  width: 90%;
-  height: 90%;
-
-  border-radius: 50%;
+.dash-aside-bg a {
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
-
-/* Forms */
-.profile-user input {
-  border: 1.5px solid #169db4 !important;
-  padding: 15px !important;
-}
-
-/* USER-ESTACIONAMENTO */
