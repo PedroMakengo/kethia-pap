@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="../assets/styles/dashboard.css" />
     <style></style>
   </head>
-  <body class="animsition">
+  <body class="">
     <div class="page-wrapper">
       <!-- Header -->
       <header class="header-mobile d-block d-lg-none">
@@ -99,10 +99,10 @@
         <div class="dash-aside-bg">
           <a href="#" class="text-white">PAINEL DE CONTROLO</a>
         </div>
-        <div class="menu-sidebar__content js-scrollbar1 bg-user-estacionamento">
+        <div class="menu-sidebar__content">
           <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-              <li class="active">
+              <li>
                 <a href="index.html"> <i class="fas fa-home"></i>Home</a>
               </li>
               <li>
@@ -115,13 +115,11 @@
                   <i class="fas fa-address-book"></i>Agendamentos</a
                 >
               </li>
-              <li>
+              <li class="active">
                 <a href="users.html"> <i class="fas fa-users"></i>Usuários</a>
               </li>
               <li>
-                <a href="?logout=true">
-                  <i class="fas fa-power-off"></i>Terminar Sessão</a
-                >
+                <a href="f"> <i class="fas fa-power-off"></i>Terminar Sessão</a>
               </li>
             </ul>
           </nav>
@@ -158,66 +156,13 @@
           >
             <div class="container-fluid">
               <div class="row mt-4">
-                <div class="col-md-4 col-lg-4">
-                  <div class="rounded p-4 borda-top">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="borda-icons shadow">
-                          <i class="fas fa-users"></i>
-                        </div>
-                      </div>
-                      <div class="col-lg-8">
-                        <h3>2</h3>
-                        <span>Postos</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-                  <div class="rounded p-4 borda-top">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="borda-icons shadow">
-                          <i class="fas fa-database"></i>
-                        </div>
-                      </div>
-                      <div class="col-lg-8">
-                        <h3>3</h3>
-                        <span>Agendamento</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-                  <div class="rounded p-4 borda-top">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="borda-icons shadow">
-                          <i class="fas fa-car"></i>
-                        </div>
-                      </div>
-                      <div class="col-lg-8">
-                        <h3>5</h3>
-                        <span>Usuários</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mt-4">
                 <div class="col-lg-12 col-xl-12 col-sm-12">
                   <div class="rounded p-4 borda-top">
-                    <h1 class="title">Gráfico Mensal de Solicitações</h1>
+                    <h1 class="title">Tabela Geral de usuários registrados.</h1>
                     <hr />
-                    <div class="charts mt-2">
-                      <canvas
-                        id="mycompra-chart"
-                        style="height: 250px"
-                      ></canvas>
-                    </div>
+
+                    <!-- Colocar aqui tabela -->
+                    <!-- Colocar aqui tabela -->
                   </div>
                 </div>
               </div>
@@ -233,77 +178,8 @@
   <!-- Bootstrap JS-->
   <script src="../assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
   <!-- Vendor JS       -->
-  <script src="../assets/vendor/animsition/animsition.min.js"></script>
-  <!-- Main JS-->
 
   <script src="../assets/scripts/Chart.min.js"></script>
 
   <script src="../assets/scripts/theme/main.js"></script>
-
-  <script>
-    $(function () {
-      // Trabalhar nos gráficos
-      var lineChart = document
-        .getElementById("mycompra-chart")
-        .getContext("2d");
-      var myLineChart = new Chart(lineChart, {
-        type: "line",
-        data: {
-          labels: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ],
-          datasets: [
-            {
-              label: "Solicitação de agendamento",
-              borderColor: "#a13529",
-              pointBorderColor: "#a13529",
-              pointBackgroundColor: "#a13529",
-              pointBorderWidth: 2,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 1,
-              pointRadius: 4,
-              backgroundColor: "transparent",
-              fill: true,
-              borderWidth: 2,
-              data: [10, 20, 10],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            position: "bottom",
-            labels: {
-              padding: 10,
-              fontColor: "#1f6feb",
-            },
-          },
-          tooltips: {
-            bodySpacing: 4,
-            mode: "nearest",
-            intersect: 0,
-            position: "nearest",
-            xPadding: 10,
-            yPadding: 10,
-            caretPadding: 10,
-          },
-          layout: {
-            padding: { left: 15, right: 15, top: 15, bottom: 15 },
-          },
-        },
-      });
-    });
-  </script>
 </html>

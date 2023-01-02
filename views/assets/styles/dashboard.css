@@ -33,6 +33,16 @@ body {
   background: linear-gradient(#e3a567c2, #a13529);
 }
 
+.btn-primary {
+  background: #e3a567c2;
+  border: 1px solid #e3a567c2;
+}
+
+.btn-primary:hover {
+  background: #e3a567;
+  border: 1px solid #e3a567;
+}
+
 .borda-icons i {
   font-size: 1.6rem;
 
