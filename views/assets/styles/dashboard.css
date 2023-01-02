@@ -106,8 +106,6 @@ body {
   display: flex;
   align-items: center;
   padding-inline: 2.2rem;
-
-  border-bottom: 1px solid #fff;
 }
 
 .dash-aside-bg a {
