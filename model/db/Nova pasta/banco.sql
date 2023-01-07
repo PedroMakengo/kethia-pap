@@ -1,0 +1,6 @@
+CREATE TABLE tb_admin()
+CREATE TABLE tb_posto_atendimento()
+CREATE TABLE tb_users()
+CREATE TABLE tb_reserva()
+CREATE TABLE tb_tipo_reserva()
+CREATE TABLE tb_efeito()
