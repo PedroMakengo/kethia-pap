@@ -155,22 +155,52 @@
           >
             <div class="container-fluid">
               <div class="row mt-4">
-                <div class="col-lg-12">
-                  <div class="card p-3">
-                    <h4>Informação</h4>
-                    <p class="mt-4">
-                      Caríssimo seja bem-vindo ao sistema de marcação de agenda
-                      para atendimento presencial no posto de identificação,
-                      tens a possibilidade de marcar um dia para efetuares o
-                      processo de emissão de um determinado documento, desta
-                      forma evitamos filas enormes.
-                    </p>
+                <div class="col-lg-12 col-xl-12 col-sm-12">
+                  <div class="rounded p-4 borda-top">
+                    <h1 class="title">Tabela Geral de Agendamento.</h1>
+                    <hr />
 
-                    <p class="mt-4">
-                      Tire o máximo proveito desta solução desenvolvida para
-                      atender a demanda de enchentes nos postos de
-                      identificação.
-                    </p>
+                    <!-- Colocar aqui tabela -->
+                    <div class="table-responsive">
+                      <table class="table" id="dataGeral" style="width: 1120px">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Bilhete de Identidade</th>
+                            <th>Telefone</th>
+                            <th>Genero</th>
+                            <th>Data registro</th>
+                            <th class="text-center">Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>
+                              <a
+                                class="btn btn-primary btn-sm"
+                                href="perfil-usuario.php?id=<?= $mostrarCliente['id_cliente'] ?>"
+                              >
+                                <i class="fas fa-eye"></i>
+                              </a>
+                              <a
+                                href="clientes.php?action=delete&id=<?= $mostrarCliente['id_cliente']?>"
+                                class="btn btn-danger btn-sm"
+                              >
+                                <i class="fas fa-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- Colocar aqui tabela -->
                   </div>
                 </div>
               </div>
