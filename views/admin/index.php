@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="../assets/styles/theme/aos.css" />
 
     <link rel="stylesheet" href="../assets/styles/dashboard.css" />
-    <style></style>
   </head>
   <body class="">
     <div class="page-wrapper">
